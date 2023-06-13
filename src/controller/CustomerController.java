@@ -10,10 +10,11 @@ import java.util.Scanner;
 public class CustomerController {
     CustomerService customerService = new CustomerServiceImpl();
     Scanner scanner = new Scanner(System.in);
-    public void create() {
 
+    public void create() {
+        String test = "abv";
         System.out.println("1. Nhap Id");
-        int cid= scanner.nextInt();
+        int cid = scanner.nextInt();
         System.out.println("2. Nhap ten");
         scanner.nextLine();
         String name = scanner.nextLine();
@@ -21,13 +22,13 @@ public class CustomerController {
         String address = scanner.nextLine();
         System.out.println("2. Nhap Phone");
         String phone = scanner.nextLine();
-        Customer customer = new Customer(cid,name,address,phone);
+        Customer customer = new Customer(cid, name, address, phone);
         customerService.create(customer);
     }
 
     public void update() {
         System.out.println("1. Nhap Id");
-        int cid= scanner.nextInt();
+        int cid = scanner.nextInt();
         System.out.println("2. Nhap ten");
         scanner.nextLine();
         String name = scanner.nextLine();
@@ -35,14 +36,14 @@ public class CustomerController {
         String address = scanner.nextLine();
         System.out.println("2. Nhap Phone");
         String phone = scanner.nextLine();
-        Customer customer = new Customer(cid,name,address,phone);
+        Customer customer = new Customer(cid, name, address, phone);
         customerService.update(customer);
 
     }
 
     public void del() {
         System.out.println("1. Nhap Id");
-        int cid= scanner.nextInt();
+        int cid = scanner.nextInt();
         customerService.del(cid);
     }
 
